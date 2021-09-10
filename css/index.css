@@ -1,0 +1,719 @@
+/* 公共样式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.buy-button {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #C40000;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* 公共样式 */
+/* 头部样式 */
+.header {
+  height: 150px;
+  position: relative;
+}
+.header .left {
+  color: #c40000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .left .title {
+  float: left;
+}
+.header .left .title .icon-envelop {
+  font-size: 66px;
+}
+.header .left .title div {
+  display: inline-block;
+  font-size: 22px;
+}
+.header .left .demand {
+  float: left;
+  margin-top: 15px;
+}
+.header .left .demand li {
+  float: left;
+  position: relative;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.header .left .demand li .circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid #c40000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30px;
+}
+.header .left .demand li div {
+  padding-left: 10px;
+  float: right;
+  font-size: 14px;
+}
+.header .right {
+  cursor: pointer;
+  color: #c40000;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .right span:first-of-type {
+  font-size: 26px;
+}
+.header .right span:last-of-type {
+  font-size: 40px;
+  font-weight: bold;
+}
+/* 头部样式 */
+/* 导航样式 */
+.nav {
+  height: 50px;
+  background-color: #3c3c3c;
+  color: #fff;
+  margin-bottom: 30px;
+  position: relative;
+}
+.nav .clearfix {
+  cursor: pointer;
+}
+.nav .clearfix > li {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+.nav .clearfix > li:hover {
+  background-color: #000;
+}
+.nav .clearfix > li .nav-1 {
+  background-color: #e7fd1f;
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%);
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.nav .clearfix > li .nav-1 ul {
+  cursor: pointer;
+}
+.nav .clearfix > li .nav-1 ul li {
+  float: left;
+}
+.nav .clearfix > li .nav-1 ul li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 10px 20px;
+}
+.nav .clearfix > li .nav-1 ul li a:hover {
+  background-color: darkred;
+  color: #fff;
+  font-weight: bold;
+}
+.nav #contact-content {
+  position: absolute;
+  z-index: 99;
+  left: 360px;
+  display: none;
+}
+.nav #contact-content ul li {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+.nav #contact-content ul li:first-of-type {
+  background-color: #2f2123;
+  color: #c54337;
+}
+.nav #contact-content ul li:nth-of-type(2) {
+  background-color: #312e1f;
+  color: #fdbd1f;
+}
+.nav #contact-content ul li:last-of-type {
+  background-color: #162e2e;
+  color: #1bbc9b;
+}
+/* 导航样式 */
+/* 商品展示区 */
+.show-myself {
+  margin-bottom: 100px;
+}
+.show-myself .left {
+  float: left;
+  margin-right: 40px;
+  position: relative;
+  /* 放大镜样式 */
+  /* 放大镜样式 */
+  /* 滚动区域 */
+}
+.show-myself .left #swiper-wrapper {
+  overflow: hidden;
+  width: 450px;
+  height: 450px;
+  position: relative;
+}
+.show-myself .left #swiper-wrapper .swiper li {
+  width: 450px;
+  height: 450px;
+  float: left;
+}
+.show-myself .left #swiper-wrapper .swiper li img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  width: 100%;
+  height: 100%;
+}
+.show-myself .left #magnifierPic {
+  width: 450px;
+  height: 450px;
+  background-color: orange;
+  position: absolute;
+  top: 0;
+  right: -460px;
+  background-image: url('../images/big.png');
+  visibility: hidden;
+}
+.show-myself .left #magnifierArea {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: move;
+  visibility: hidden;
+}
+.show-myself .left .small-pic {
+  margin-top: 15px;
+}
+.show-myself .left .left-arrow,
+.show-myself .left .right-arrow {
+  width: 41px;
+  height: 82px;
+  box-sizing: border-box;
+  line-height: 82px;
+  text-align: center;
+  color: #ccc;
+  font-size: 40px;
+  font-weight: bold;
+  float: left;
+}
+.show-myself .left .left-arrow {
+  margin-right: 5px;
+}
+.show-myself .left .scroll {
+  float: left;
+  width: 368px;
+  height: 82px;
+  /* 后续滚动需要 */
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.show-myself .left .scroll .selectPic {
+  position: absolute;
+}
+.show-myself .left .scroll .selectPic li {
+  width: 82px;
+  height: 82px;
+  box-sizing: border-box;
+  float: left;
+}
+.show-myself .left .scroll .selectPic li + li {
+  margin-left: 10px;
+}
+.show-myself .left .scroll .selectPic li img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  width: 100%;
+  height: 100%;
+}
+.show-myself .left .scroll .selectPic .activeImg {
+  border: 3px solid #c40000;
+}
+.show-myself .right {
+  font-size: 12px;
+  overflow: hidden;
+}
+.show-myself .right .top {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+.show-myself .right .top h4 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.show-myself .right .top p {
+  font-size: 12px;
+  color: #c40000;
+  margin-bottom: 30px;
+}
+.show-myself .right .top .price {
+  margin-bottom: 15px;
+}
+.show-myself .right .top .price span {
+  color: #6388cc;
+}
+.show-myself .right .top .price span:nth-of-type(2) {
+  color: #c40000;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.show-myself .right .top .price strong {
+  font-size: 32px;
+}
+.show-myself .right .top .area {
+  margin-bottom: 15px;
+}
+.show-myself .right .top .area span:nth-of-type(2) {
+  background-color: #c40000;
+  color: #fff;
+  padding: 0 10px;
+}
+.show-myself .right .icon-question {
+  cursor: pointer;
+}
+.show-myself .right .detail {
+  color: #999 !important;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #f6f566;
+  margin-left: 5px;
+  display: none;
+}
+.show-myself .right .middle {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.show-myself .right .middle .express {
+  margin-bottom: 15px;
+}
+.show-myself .right .middle .express div {
+  display: inline-block;
+}
+.show-myself .right .middle .express div i {
+  color: #999;
+  font-style: normal;
+}
+.show-myself .right .middle .express div span {
+  color: #6388cc;
+}
+.show-myself .right .middle .express div select {
+  cursor: pointer;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+}
+.show-myself .right .bottom {
+  padding: 20px 0;
+}
+.show-myself .right .bottom .attribute {
+  margin-bottom: 15px;
+}
+.show-myself .right .bottom .attribute div {
+  display: inline-block;
+  border: 2px solid #863177;
+  font-size: 16px;
+  padding: 4px 10px;
+}
+.show-myself .right .bottom .attribute div .icon-checkmark1 {
+  font-size: 12px;
+}
+.show-myself .right .bottom .count {
+  margin-bottom: 15px;
+}
+.show-myself .right .bottom .count div {
+  display: inline-block;
+  height: 24px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+}
+.show-myself .right .bottom .count div span {
+  vertical-align: middle;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  width: 22px;
+  text-align: center;
+}
+.show-myself .right .bottom .count div .icon-minus {
+  border-right: 2px solid #999;
+  cursor: pointer;
+}
+.show-myself .right .bottom .count div .icon-plus {
+  border-left: 2px solid #999;
+  cursor: pointer;
+}
+.show-myself .right .bottom .count div span {
+  color: #999;
+}
+.show-myself .right .bottom .count div span:nth-of-type(2) {
+  color: black;
+  font-size: 16px;
+}
+.show-myself .right .bottom .note {
+  margin-bottom: 15px;
+}
+.show-myself .right .bottom .note span:last-of-type {
+  color: #999;
+}
+.show-myself .right .price > span:first-of-type,
+.show-myself .right .area > span:first-of-type,
+.show-myself .right .express > span:first-of-type,
+.show-myself .right .cost > span:first-of-type,
+.show-myself .right .attribute > span:first-of-type,
+.show-myself .right .count > span:first-of-type,
+.show-myself .right .note > span:first-of-type {
+  font-size: 12px;
+  color: #999 !important;
+  margin-right: 20px;
+}
+.disable-color {
+  color: #c40000 !important;
+}
+.disable-btn {
+  color: #999 !important;
+  background-color: #bd4444 !important;
+}
+/* 商品展示区 */
+/* 第二个导航栏 */
+.twoNav {
+  border-bottom: 3px solid #000;
+}
+.twoNav .left {
+  float: left;
+}
+.twoNav .left ul li {
+  float: left;
+}
+.twoNav .left ul li a {
+  display: block;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.twoNav .left ul li a:hover {
+  background-color: #34383b;
+  color: #fff;
+}
+.twoNav .left ul li:first-of-type a {
+  background-color: #34383b;
+  color: #fff;
+}
+.twoNav .right {
+  float: right;
+}
+.twoNav .right span {
+  display: inline-block;
+  vertical-align: middle;
+  height: 60px;
+  line-height: 60px;
+  color: #999;
+  font-size: 12px;
+}
+.twoNav .right span:last-of-type {
+  font-size: 30px;
+  color: #000;
+  padding-right: 40px;
+}
+.twoNav .right div {
+  display: inline-block;
+}
+/* 第二个导航栏 */
+/* 个人介绍 */
+.instroduce {
+  margin-top: 10px;
+}
+.instroduce .left {
+  padding: 30px 60px;
+  width: 48%;
+  background-color: #C40000;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 20px;
+}
+.instroduce .left .title .icon-profile {
+  color: #fff;
+  font-size: 100px;
+}
+.instroduce .left .title img {
+  float: right;
+}
+.instroduce .left .info {
+  padding: 50px 0;
+}
+.instroduce .left .info li {
+  border-bottom: 2px solid #a9a9a9;
+}
+.instroduce .left .info li span {
+  line-height: 60px;
+  font-size: 16px;
+  color: #fff;
+}
+.instroduce .left .info li span:first-of-type {
+  font-size: 30px;
+  padding-right: 20px;
+}
+.instroduce .right {
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+}
+.instroduce .right .title {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #000;
+}
+.instroduce .right ul {
+  background-color: orange;
+  padding-bottom: 7.5px;
+}
+.instroduce .right ul li {
+  width: 190px;
+  height: 190px;
+  float: left;
+  background-color: #fff;
+  margin-top: 7.5px;
+  margin-left: 7.5px;
+  cursor: move;
+}
+.instroduce .right ul li img {
+  width: 100%;
+  height: 100%;
+}
+.instroduce .right ul li:hover {
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s linear;
+  transform: translateY(-5px);
+}
+/* 个人介绍 */
+/* 个人技能 */
+.personal-skill {
+  background-color: #f5f5f5;
+  margin-top: 60px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.personal-skill .left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background-color: #0099ff;
+  color: #fff;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.personal-skill .left p {
+  width: 30px;
+  font-size: 30px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 35px;
+}
+.personal-skill .right {
+  float: left;
+  padding-left: 120px;
+}
+.personal-skill .right ul li {
+  width: 1104px;
+  box-sizing: border-box;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 10px;
+  padding: 0 10px;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.6);
+}
+.personal-skill .right ul li:hover {
+  transition: all 0.4s linear;
+  color: #fff;
+  padding-left: 25px;
+  text-shadow: 2px 1px 3px #360;
+  background: -webkit-linear-gradient(top, #62c462, #51a351);
+}
+/* 个人技能 */
+/* 前端作品演示 */
+.webWorks {
+  padding-top: 70px;
+}
+.webWorks .title {
+  height: 70px;
+  background-color: #3c3c3c;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  font-size: 30px;
+}
+.webWorks .showWorks {
+  background-color: #f5f5f5;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.webWorks .showWorks li {
+  float: left;
+  width: 228px;
+  height: 240px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.webWorks .showWorks li img {
+  width: 100%;
+  height: 100%;
+}
+.webWorks .showWorks li:hover .introduce {
+  display: block;
+}
+.webWorks .showWorks li .introduce {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 149, 114, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  display: none;
+}
+.webWorks .showWorks li .introduce h3 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.webWorks .showWorks li .introduce p {
+  color: rgba(255, 255, 255, 0.8);
+  text-indent: 2em;
+}
+/* 前端作品演示 */
+/* 工作经历 */
+.work-experience {
+  padding-top: 30px;
+}
+.work-experience .title {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  background-color: #f5f5f5;
+  font-size: 24px;
+  font-weight: bold;
+}
+.work-experience ul {
+  border: 1px solid #ddd;
+}
+.work-experience ul li {
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  position: relative;
+}
+.work-experience ul li .time {
+  background-color: #fff;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+.work-experience ul li .time .box {
+  float: left;
+  margin-top: 17px;
+  margin-left: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: #f0f0f0;
+}
+.work-experience ul li .time span {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  float: left;
+  padding-left: 20px;
+}
+.work-experience ul li .content {
+  opacity: 0;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  transition: all 1s linear;
+}
+.work-experience ul li .content p {
+  line-height: 20px;
+}
+.work-experience ul li .detail {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 30px;
+  color: #999;
+  text-shadow: 1px 1px 2px #999;
+  transition: all 1s linear;
+}
+.work-experience ul li:hover .box {
+  background-color: #999;
+}
+.work-experience ul li:hover .content {
+  opacity: 1;
+}
+.work-experience ul li:hover .detail {
+  opacity: 0;
+}
+/* 工作经历 */

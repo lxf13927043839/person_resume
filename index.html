@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李秀峰</title>
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./css/fontIco.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+<body>
+    <!-- 头部简历区域 -->
+    <div class="header container">
+        <div class="left clearfix">
+            <!-- 标题 -->
+            <div class="title">
+                <span class="icon-envelop"></span>
+                <div>
+                    <h3>李秀峰简历</h3>
+                    <span>LiXiuFeng Resume</span>    
+                </div>
+            </div>
+            <!-- 需求 -->
+            <ul class="demand">
+                <li title="我想在深圳地区工作">
+                    <span class="circle">粤</span>
+                    <div>
+                        <p>深圳</p>
+                        <p>地区</p>    
+                    </div>
+                </li>
+                <li title="我应聘的岗位是web前端开发">
+                    <span class="circle">web</span>
+                    <div>
+                        <p>前端</p>
+                        <p>开发</p>    
+                    </div>
+                </li>
+                <li title="我期望的薪资是不低于7000元/月">
+                    <span class="circle">7</span>
+                    <div>
+                        <p>7k</p>
+                        <p>月薪</p>    
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <span class="icon-phone"></span>
+            <span>13927043839</span>
+        </div>
+    </div>
+
+    <!-- nav导航 -->
+    <div class="nav">
+        <ul class="container clearfix">
+            <li>首页</li>
+            <li>github</li>
+            <li id="personalBlog">
+                个人博客
+                <!-- 把要显示的内容放进来，简易处理 -->
+                <div class="nav-1 container" id="nav-1">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">前端demo</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">前端demo</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">前端demo</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">前端demo</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li id="contact">联系方式</li>
+        </ul>
+        <!-- 联系方式 -->
+        <div id="contact-content">
+            <ul>
+                <li>博客：hello i am Jerry</li>
+                <li>邮箱：111.qq.com</li>
+                <li>电话：13927043839</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 商品展示区 -->
+    <div class="show-myself container clearfix">
+        <div class="left">
+            <!-- 轮播图 -->
+            <div id="swiper-wrapper">
+                <ul class="swiper clearfix">
+                    <li>
+                        <img src="./images/small.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./images/P_002.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./images/P_003.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./images/P_004.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./images/P_005.jpg" alt="">
+                    </li>
+                </ul>    
+            </div>
+            <!-- 缩略图 -->
+            <div class="small-pic">
+                <!-- 左箭头 -->
+                <div class="left-arrow" id="l-arrow">
+                    <span class="icon-ctrl-left"></span>
+                </div>
+                <!-- 中间缩略图图区域 -->
+                <div class="scroll" id="scrollId">
+                    <ul class="selectPic clearfix">
+                        <li class="activeImg">
+                            <img src="./images/small.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/P_002.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/P_003.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/P_004.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/P_005.jpg" alt="">
+                        </li>
+                    </ul>    
+                </div>
+                <!-- 右箭头 -->
+                <div class="right-arrow" id="r-arrow">
+                    <span class="icon-ctrl-right"></span>
+                </div>    
+            </div>
+            <!-- 放大镜图片 -->
+            <div id="magnifierPic"></div>
+            <div id="magnifierArea"></div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <h4>WEB前端开发 JavaScript基础扎实 掌握vue技术栈 / Qt开发经验 / 驱动调试经验</h4>
+                <p>目标公司类型：电子商务型公司（平台型或第三方服务商）</p>
+                <div class="price">
+                    <span>价格</span>
+                    <span>￥<strong>7000.00</strong></span>
+                    <span>/每月租金</span>
+                    <span class="icon-question" id="question1"></span>
+                    <span class="detail">此费用为商品的每月租金,使用时请按时续费。</span>
+                </div>
+                <div class="area">
+                    <span>商品所在地</span>
+                    <span>深圳市 · 宝安区</span>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="express">
+                    <span>配送</span>
+                    <div>
+                        上海
+                        <i>至</i>
+                        <!-- 省 -->
+                        <select name="" id="prov">
+                            <option>请选择省</option>
+                        </select>
+                        <!-- 市 -->
+                        <select name="" id="city">
+                            <option>请选择市</option>
+                        </select>
+                        <!-- 县 -->
+                        <select name="" id="country">
+                            <option>请选择县区</option>
+                        </select>
+                        有货
+                        <span>/配送时间</span>
+                        <span class="icon-question" id="question2"></span>
+                        <span class="detail">约定时间发货，如有意外，会提前通知。</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    <span>运费</span>
+                    <span>免运费 &nbsp（广东以外地区不发货）</span>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="attribute">
+                    <span>属性</span>
+                    <div>
+                        <span>WEB前端开发</span>
+                        <span class="icon-checkmark1"></span>
+                    </div>
+                </div>
+                <div class="count">
+                    <span>数量</span>
+                    <div>
+                        <span class="icon-minus"></span>
+                        <span id="showCount">1</span>
+                        <span class="icon-plus"></span>    
+                    </div>
+                </div>
+                <div class="note">
+                    <span>备注</span>
+                    <span id="sale-only-one">促销商品，仅一件，多拍不发货！</span>
+                </div>
+                <div class="buy-button">立即购买</div>
+            </div>
+        </div>
+    </div>
+    <!-- 第二个导航栏，介绍 -->
+    <div class="twoNav container clearfix">
+        <div class="left">
+            <ul class="clearfix">
+                <li>                   
+                    <a href="#personal">个人简介</a>
+                </li>
+                <li>
+                    <a href="#skill">技能总结</a>
+                </li>
+                <li>
+                    <a href="#showWorks">前端演示</a>
+                </li>
+                <li>
+                    <a href="#workExperience">工作经历</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <span>李秀峰</span>
+            <span>web前端开发</span>
+            <span>￥</span>
+            <span>7000</span>
+            <div class="buy-button">立即购买</div>
+        </div>
+    </div>
+    <!-- 个人的介绍 -->
+    <div class="instroduce container clearfix">
+        <div class="left">
+            <div class="title">
+                <span class="icon-profile"></span>
+                <img src="./images/information.png" alt="">
+            </div>
+            <ul class="info">
+                <li>
+                    <span class="icon-user"></span>
+                    <span>李秀峰/1997年</span>
+                </li>
+                <li>
+                    <span class="icon-location"></span>
+                    <span>深圳市宝安区（目前所在地）</span>
+                </li>
+                <li>
+                    <span class="icon-home"></span>
+                    <span>学历本科-电子科技大学中山学院</span>
+                </li>
+                <li>
+                    <span class="icon-pencil"></span>
+                    <span>于2020年2月份工作</span>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="title">
+                技能树/工具
+            </div>
+            <ul class="clearfix" id="skillList">
+                <li>
+                    <img src="./images/skill/html.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/skill/css.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/skill/js.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/skill/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/skill/ajax.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/skill/vue.webp" alt="">
+                </li>
+                <li>
+                    <img src="./images/skill/webpack.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/skill/ps.png" alt="">
+                </li>
+                <li>
+                    <img src="./images/skill/git.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 个人技能 -->
+    <div class="personal-skill" id="skill">
+        <div class="container clearfix">
+            <div class="left"><p>个人技能</p></div>
+            <div class="right">
+                <ul>
+                    <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                    <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                    <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                    <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                    <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                    <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                    <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                    <li>掌握模块化开发的思路和原理，提高代码的复用性，可针对项目实际进行模块化开发，具备工程化的思维和实践经验；</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 前端作品演示 -->
+    <div class="webWorks" id="showWorks">
+        <div class="title container">前端作品演示</div>
+        <ul class="showWorks container clearfix">
+            <li>
+                <img src="./images/demo-list.jpg" alt="">
+                <!-- 项目描述 -->
+                <div class="introduce">
+                    <h3>电子简历</h3>
+                    <p class="content">这是一个电子简历</p>
+                </div>
+            </li>
+            <li>
+                <img src="./images/demo-list.jpg" alt="">
+                <!-- 项目描述 -->
+                <div class="introduce">
+                    <h3>电子简历</h3>
+                    <p class="content">这是一个电子简历</p>
+                </div>
+            </li>
+            <li>
+                <img src="./images/demo-list.jpg" alt="">
+                <!-- 项目描述 -->
+                <div class="introduce">
+                    <h3>电子简历</h3>
+                    <p class="content">这是一个电子简历</p>
+                </div>
+            </li>
+            <li>
+                <img src="./images/demo-list.jpg" alt="">
+            </li>
+            <li>
+                <img src="./images/demo-list.jpg" alt="">
+            </li>
+            <li>
+                <img src="./images/demo-list.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <!-- 工作经历 -->
+    <div class="work-experience container" id="workExperience">
+        <div class="title">工作经历</div>
+        <ul>
+            <li>
+                <div class="time clearfix">
+                    <div class="box"></div>
+                    <span>2020年12月</span>    
+                </div>
+                <div class="content">
+                    <p>公司：深圳市宇芯数码技术有限公司</p>
+                    <p>职位：嵌入式软件</p>
+                    <p>工作：xxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+                <div class="detail">查看详情</div>            
+            </li>
+            <li>
+                <div class="time clearfix">
+                    <div class="box"></div>
+                    <span>2020年12月</span>    
+                </div>
+                <div class="content">
+                    <p>公司：深圳市宇芯数码技术有限公司</p>
+                    <p>职位：嵌入式软件</p>
+                    <p>工作：xxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+                <div class="detail">查看详情</div>            
+            </li>
+            <li>
+                <div class="time clearfix">
+                    <div class="box"></div>
+                    <span>2020年12月</span>    
+                </div>
+                <div class="content">
+                    <p>公司：深圳市宇芯数码技术有限公司</p>
+                    <p>职位：嵌入式软件</p>
+                    <p>工作：xxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 导入公共的方法 -->
+    <script src="./js/common.js"></script>
+    <!-- 导入js文件 -->
+    <script src="./js/index.js"></script>
+    <!-- 轮播图 -->
+    <script src="./js/swiper.js"></script>
+    <!-- 放大镜功能 -->
+    <script src="./js/magnifier.js"></script>
+    <!-- 省市县三级联动 -->
+    <script src="./js/cityCode.js"></script>
+    <script src="./js/SelectCity.js"></script>
+
+</body>
+</html>

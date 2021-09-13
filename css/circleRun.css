@@ -1,0 +1,85 @@
+#bg {
+    width: 1000px;
+    height: 1000px;
+    position: fixed;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateZ(0deg);
+    /*background-color: pink;*/
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: -webkit-linear-gradient(top, #fff, lightgray);
+}
+.row1 .scale {
+    width: 60px;
+    height: 60px;
+    margin-top: -250px;
+}
+.row1 .cir1Pos {	
+    margin-left: -300px;
+}
+.row1 .cir2Pos {
+    margin-left: 0px;
+}
+.row1 .cir3Pos {
+    margin-left: 500px;
+}
+
+.row2 .scale {
+    width: 200px;
+    height: 200px;
+}
+.row2 .cir1Pos {
+    margin-top: -50px;
+    margin-left: -500px;
+}
+.row2 .cir2Pos {
+    margin-top: 50px;
+    margin-left: 0px;
+}
+.row2 .cir3Pos {
+    margin-top: -80px;
+    margin-left: 400px;
+}
+
+.row3 .scale {
+    width: 400px;
+    height: 400px;
+}
+.row3 .cir1Pos {
+    margin-top: 150px;
+    margin-left: -200px;
+}
+.row3 .cir2Pos {
+    margin-top: 50px;
+    margin-left: 700px;
+}
+
+/* transform rotate是2d旋转，绕着中心点，rotateX是3d旋转 */
+@keyframes cirMove {
+    form {
+        /* 上边初始化给了translate，这里似乎不起作用，后续研究？？？待处理 */
+        /* transform: translate(-400px) rotate(0deg); */
+    }
+    to {
+        transform: translate(-800px) rotate(720deg);
+    }
+}
+.row1 .cirMoving {
+    animation: cirMove 10s linear infinite;
+}
+.row2 .cirMoving {
+    animation: cirMove 20s linear infinite;
+}
+.row3 .cirMoving {
+    animation: cirMove 30s linear infinite;
+}

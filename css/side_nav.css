@@ -1,0 +1,91 @@
+ 
+.side_nav {
+    line-height: 34px;
+    color: #999;
+    width: 138px; 
+    display: block;
+    overflow: hidden; 
+    position: fixed; 
+    right: 10px; 
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ 
+.side_nav li {
+    width: 100%; 
+    height: auto; 
+    margin: 10px 0 0; 
+    display: block; 
+    position: relative; 
+    zoom: 1; 
+    z-index: 10; 
+    cursor: pointer; 
+}
+ 
+.side_nav li .i1 {
+    border: 2px solid #e7e7e7;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    z-index: 9;
+    position: absolute;
+    background-color: #fff;
+    left: 0px;
+}
+ 
+.side_nav li .i2 {
+    width: 12px; 
+    height: 12px; 
+    border: 2px solid #f4f4f4; 
+    background: #f4f4f4; 
+    border-radius: 12px; 
+    box-shadow: inset 0px 0px 3px #518ABC, inset 0px 0px 3px #518ABC, inset 0px 0px 3px #518ABC, inset 0px 0px 3px #518ABC;
+    display: block;
+    margin: 1px 0 0 1px;
+}
+ 
+.side_nav li .i3 {
+    display: block;
+    width: 0;
+    border: 3px solid #e7e7e7;
+    border-radius: 6px;
+    position: relative;
+    left: 22px;top: 9px; 
+}
+ 
+.side_nav li a {
+    padding: 2px 15px 4px 15px;
+    font-size: 14px; 
+    font-weight: normal; 
+    color: #333; background: #e7e7e7; 
+    border-radius: 4px;
+    position: relative;
+    left: 28px;
+    border-radius: 20px;
+    top: -13px;
+}
+ 
+.side_nav .f-hover a {
+    background: #518ABC;
+    color: #fff;
+}
+ 
+.side_nav .f-hover .i1, .side_nav .f-hover .i3 {
+    border-color: #518abc;
+}
+ 
+.side_nav .f-hover .i2{ 
+    background: #518ABC;
+}
+ 
+.side_nav div {
+    width: 1px;
+    height: 240px; 
+    background: #aaa; 
+    position: absolute; 
+    left: 10px; 
+    top: 30px;
+    display: block;
+    overflow: hidden;
+}

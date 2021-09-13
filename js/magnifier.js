@@ -36,10 +36,11 @@ var bigPic = {
 */
 function handleMouseOver (e) {
     // 图片会被移动,需要根据当前是哪一张
+    var pos = {}
     if (swiper.imgIndex === 0) {
-        var pos = targetLi.getBoundingClientRect()
+        pos = targetLi.getBoundingClientRect()
     } else if (swiper.imgIndex === swiper.imgCount - 1) {
-        var pos = swiper.cloneFirstLi.getBoundingClientRect()
+        pos = swiper.cloneFirstLi.getBoundingClientRect()
     }
     var scroll = getScroll(e)
     liX = pos.left + scroll.scrollLeft

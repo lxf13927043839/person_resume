@@ -2,6 +2,12 @@
 * {
     margin: 0;
     padding: 0;
+    -moz-user-select:none; /* Firefox私有属性 */
+    -webkit-user-select:none; /* WebKit内核私有属性 */
+    -ms-user-select:none; /* IE私有属性(IE10及以后) */
+    -khtml-user-select:none; /* KHTML内核私有属性 */
+    -o-user-select:none; /* Opera私有属性 */
+    user-select:none; /* CSS3属性 */
 }
 html, body, ul, h1, h2, h3, h4, h5, p {
     margin: 0;
@@ -156,11 +162,11 @@ a {
     #contact-content {
         position: absolute;
         z-index: 99;
-        left: 360px;
+        left: 296px;
         display: none;
         ul {
             li {
-                width: 200px;
+                width: 300px;
                 height: 50px;
                 line-height: 50px;
                 padding: 0 10px;
@@ -334,7 +340,6 @@ a {
         }
         .detail {
             color: #999!important;
-            display: inline-block;
             padding: 5px;
             border: 1px solid #f6f566;
             margin-left: 5px;
@@ -596,7 +601,7 @@ a {
         padding-left: 120px;
         ul {
             li {
-                width: 1104px;
+                width: 1000px;
                 box-sizing: border-box;
                 height: 60px;
                 line-height: 60px;
@@ -640,6 +645,9 @@ a {
             margin-left: 10px;
             cursor: pointer;
             position: relative;
+            a {
+                display: block;
+            }
             img {
                 width: 100%;
                 height: 100%;
@@ -720,7 +728,10 @@ a {
                 padding-bottom: 40px;
                 transition: all 1s linear;
                 p {
-                    line-height: 20px;
+                    line-height: 30px;
+                    &:nth-of-type(n+4) {
+                        text-indent: 3em;
+                    }
                 }
             }
             .detail {
@@ -750,3 +761,35 @@ a {
     }
 }
 /* 工作经历 */
+
+/* 底部页脚 */
+footer {
+    height: 300px;
+    background-color: #1f1f1f;
+    color: white;
+    padding-top: 60px;
+    dl {
+        width: 33%;
+        float: left;
+        dt {
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+        dd {
+            padding-left: 20px;
+            line-height: 30px;
+            height: 30px;
+            &:hover {
+                color: #c40000;
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+                transform: translate(-3px, -3px);
+            }
+        }
+    }
+}
+
+/* 底部页脚 */
+

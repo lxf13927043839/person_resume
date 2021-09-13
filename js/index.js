@@ -31,6 +31,7 @@ question1.onmouseover = function () {
 question1.onmouseout = function () {
     question1.nextElementSibling.style.display = 'none'
 }
+
 var question2 = document.getElementById('question2')
 question2.onmouseover = function () {
     question2.nextElementSibling.style.display = 'inline-block'
@@ -81,3 +82,54 @@ function animateShake () {
         this.classList.remove('shill-shake')
     }, 500)
 }
+
+// 侧边导航栏，激活事件
+var side_nav = document.querySelector('.side_nav')
+var side_liList = side_nav.children
+for (var i = 0, len = side_liList.length; i < len; i++) {
+    var li = side_liList[i]
+    li.onclick = selectSideNav
+}
+function selectSideNav () {
+    for (var i = 0, len = side_liList.length; i < len; i++) {
+        var li = side_liList[i]
+        li.classList.remove('f-hover')
+    }   
+    this.classList.add('f-hover')
+}
+// scroll滚动的距离要跟点击的后距离一样，不然会错位
+var syncIndex = 0 
+window.addEventListener('scroll', function () {
+    var scrollTop = getScroll().scrollTop
+
+    // console.log(scrollTop)
+    if (scrollTop < 876) {
+        if (syncIndex !== 0) {
+            syncIndex = 0
+            side_liList[syncIndex].click()
+        }
+    } else if (scrollTop < 1660) {
+        if (syncIndex !== 1) {
+            syncIndex = 1
+            side_liList[syncIndex].click()
+        }
+    } else if (scrollTop < 2440) {
+        if (syncIndex !== 2) {
+            syncIndex = 2
+            side_liList[syncIndex].click()
+        }
+    } else if (scrollTop < 3080) {
+        if (syncIndex !== 3) {
+            syncIndex = 3
+            side_liList[syncIndex].click()
+        }
+    } else if (scrollTop < 3432) {
+        if (syncIndex !== 4) {
+            syncIndex = 4
+            side_liList[syncIndex].click()
+        }
+    } else {
+        syncIndex = 5
+        side_liList[syncIndex].click()
+    }
+})

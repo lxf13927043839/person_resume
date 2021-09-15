@@ -98,10 +98,12 @@ function selectSideNav () {
     this.classList.add('f-hover')
 }
 // scroll滚动的距离要跟点击的后距离一样，不然会错位
+// 使用F12的时候，会有滚动条，或者调试面板会会对滚动的距离造成影响
+// var test = document.getElementById('test')
 var syncIndex = 0 
 window.addEventListener('scroll', function () {
     var scrollTop = getScroll().scrollTop
-
+    // test.innerText = scrollTop
     // console.log(scrollTop)
     if (scrollTop < 876) {
         if (syncIndex !== 0) {
@@ -123,7 +125,7 @@ window.addEventListener('scroll', function () {
             syncIndex = 3
             side_liList[syncIndex].click()
         }
-    } else if (scrollTop < 3432) {
+    } else if (scrollTop < 3415) {
         if (syncIndex !== 4) {
             syncIndex = 4
             side_liList[syncIndex].click()

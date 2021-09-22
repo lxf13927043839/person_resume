@@ -41,6 +41,8 @@ function handleMouseOver (e) {
         pos = targetLi.getBoundingClientRect()
     } else if (swiper.imgIndex === swiper.imgCount - 1) {
         pos = swiper.cloneFirstLi.getBoundingClientRect()
+    } else {
+        return -1
     }
     var scroll = getScroll(e)
     liX = pos.left + scroll.scrollLeft

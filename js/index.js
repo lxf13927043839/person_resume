@@ -100,38 +100,60 @@ function selectSideNav () {
 // scroll滚动的距离要跟点击的后距离一样，不然会错位
 // 使用F12的时候，会有滚动条，或者调试面板会会对滚动的距离造成影响
 // var test = document.getElementById('test')
-var syncIndex = 0 
+var syncIndex = 0
+var scrollingFlag = false
+// 顶部的话就能看到轮播图，个人技能以下就停止轮播
+var inSwiperAreaFlag = true
 window.addEventListener('scroll', function () {
-    var scrollTop = getScroll().scrollTop
-    // test.innerText = scrollTop
-    // console.log(scrollTop)
-    if (scrollTop < 876) {
-        if (syncIndex !== 0) {
-            syncIndex = 0
-            side_liList[syncIndex].click()
-        }
-    } else if (scrollTop < 1660) {
-        if (syncIndex !== 1) {
-            syncIndex = 1
-            side_liList[syncIndex].click()
-        }
-    } else if (scrollTop < 2440) {
-        if (syncIndex !== 2) {
-            syncIndex = 2
-            side_liList[syncIndex].click()
-        }
-    } else if (scrollTop < 3080) {
-        if (syncIndex !== 3) {
-            syncIndex = 3
-            side_liList[syncIndex].click()
-        }
-    } else if (scrollTop < 3415) {
-        if (syncIndex !== 4) {
-            syncIndex = 4
-            side_liList[syncIndex].click()
-        }
-    } else {
-        syncIndex = 5
-        side_liList[syncIndex].click()
+    if (!scrollingFlag) {
+        scrollingFlag = true
+        // 定时越久，打印的次数就越少，频率降低
+        var time = setTimeout(function () {
+            // console.log('gogo')
+            scrollingFlag = false
+            var scrollTop = getScroll().scrollTop
+            // test.innerText = scrollTop
+            // console.log(scrollTop)
+            if (scrollTop < 876) {
+                // 如果是在当前区域就不用再设置了
+                if (syncIndex !== 0) {
+                    syncIndex = 0
+                    side_liList[syncIndex].click()
+                }
+                inSwiperAreaFlag = true
+            } else if (scrollTop < 1660) {
+                if (syncIndex !== 1) {
+                    syncIndex = 1
+                    side_liList[syncIndex].click()
+                }
+                inSwiperAreaFlag = false
+            } else if (scrollTop < 2440) {
+                if (syncIndex !== 2) {
+                    syncIndex = 2
+                    side_liList[syncIndex].click()
+                }
+                inSwiperAreaFlag = false
+
+            } else if (scrollTop < 3080) {
+                if (syncIndex !== 3) {
+                    syncIndex = 3
+                    side_liList[syncIndex].click()
+                }
+                inSwiperAreaFlag = false
+
+            } else if (scrollTop < 3415) {
+                if (syncIndex !== 4) {
+                    syncIndex = 4
+                    side_liList[syncIndex].click()
+                }
+                inSwiperAreaFlag = false
+
+            } else {
+                syncIndex = 5
+                side_liList[syncIndex].click()
+                inSwiperAreaFlag = false
+            }
+        }, 20)
     }
+    
 })

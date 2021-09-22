@@ -1,4 +1,5 @@
 // 轮播图
+// 跟滚动条
 var swiper = {
     ul: null,
     imgIndex: 0,
@@ -54,8 +55,16 @@ function _initSwiper() {
         moveAnimate(swiper.ul, -swiper.imgWidth*swiper.imgIndex)
     }
     // 定时播放,就是直接去点击按钮就可以了
+    /*
+        如果用户没有看轮播图区域、或者页面被隐藏了、或者页面滚别的地方去了、就不用轮播了
+    */
     setInterval(function () {
-        if (!swiper.mouseoverFlag) {
+        // if (!swiper.mouseoverFlag) {
+        //     rArrow.click()
+        // }
+        // 顶部的话就能看到轮播图，个人技能以下就停止轮播
+        // var inSwiperAreaFlag = true在index.js中声明
+        if (!documentHiddenFlag && !swiper.mouseoverFlag && inSwiperAreaFlag) {
             rArrow.click()
         }
     }, 2000)
@@ -67,6 +76,16 @@ function _initSwiper() {
         swiper.mouseoverFlag = false
     }
 }
+
+/*
+    后台时候，hidden 为 true。
+    前台时候，hidden 为 false。
+*/
+var documentHiddenFlag = false
+document.addEventListener('visibilitychange', function () {
+    documentHiddenFlag = document.hidden
+})
+
 
 function _initScroll() {
     var scrollId = document.getElementById('scrollId')

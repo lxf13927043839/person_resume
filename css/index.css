@@ -341,7 +341,10 @@ a {
   padding: 5px;
   border: 1px solid #f6f566;
   margin-left: 5px;
-  display: none;
+  display: block;
+  height: 25px;
+  line-height: 13px;
+  box-sizing: border-box;
 }
 .show-myself .right .middle {
   padding: 20px 0;

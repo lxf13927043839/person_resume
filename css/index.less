@@ -338,12 +338,16 @@ a {
         .icon-question {
             cursor: pointer;
         }
+        // 这里的布局不合理，高度不好处理，出现的时候会往下偏移
         .detail {
             color: #999!important;
             padding: 5px;
             border: 1px solid #f6f566;
             margin-left: 5px;
-            display: none;
+            display: block;
+            height: 25px;
+            line-height: 13px;
+            box-sizing: border-box;
         }
         .middle {
             padding: 20px 0;

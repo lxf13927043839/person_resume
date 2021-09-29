@@ -341,7 +341,7 @@ a {
   padding: 5px;
   border: 1px solid #f6f566;
   margin-left: 5px;
-  display: block;
+  display: none;
   height: 25px;
   line-height: 13px;
   box-sizing: border-box;
